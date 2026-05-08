@@ -1,0 +1,66 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Global Hardened Helper Functions
+    function isSignedIn() { return request.auth != null; }
+    function isValidId(id) { return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$'); }
+    function isOwner(userId) { return isSignedIn() && request.auth.uid == userId; }
+    function isAdmin() {
+      return isSignedIn() && (
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid)) ||
+        request.auth.token.email == "phonkphonkswe@gmail.com"
+      );
+    }
+    
+    // User Validator
+    function isValidUser(data) {
+      return data.username is string && data.username.size() <= 64;
+    }
+
+    // Users Collection
+    match /users/{userId} {
+      allow get: if isOwner(userId) || isAdmin();
+      allow list: if isAdmin();
+      allow create: if isOwner(userId) && isValidUser(request.resource.data);
+      allow update: if (isOwner(userId) && isValidUser(request.resource.data)) || isAdmin();
+    }
+
+    // Users by Username (for login)
+    match /users_by_username/{username} {
+      allow read: if true;
+      allow create: if isAuthenticated();
+      allow update: if isAuthenticated();
+    }
+
+    // Studio Maps
+    match /studio_maps/{username} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated();
+    }
+
+    // Games Collection
+    match /games/{gameId} {
+      allow read: if true;
+      allow create: if isAuthenticated();
+      allow update: if isDocOwner() || isAdmin();
+      allow delete: if isDocOwner() || isAdmin();
+    }
+
+    // Videos Collection
+    match /videos/{videoId} {
+      allow read: if true;
+      allow create: if isAuthenticated();
+      allow update: if isAuthenticated(); // For likes
+      allow delete: if isDocOwner() || isAdmin();
+    }
+
+    // Global Settings
+    match /global_settings/{settingId} {
+      allow read: if true;
+      allow write: if isAuthenticated() && (
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.username.lower() == "glidrovia" ||
+        isAdmin()
+      );
+    }
+  }
+}

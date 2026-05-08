@@ -1,0 +1,39 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile information",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "username": { "type": "string" },
+        "displayName": { "type": "string" },
+        "xp": { "type": "number" },
+        "isUpdated": { "type": "boolean" },
+        "acceptedToS": { "type": "boolean" }
+      },
+      "required": ["uid", "username"]
+    },
+    "Game": {
+      "title": "Game",
+      "description": "Game definition",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "creatorUid": { "type": "string" }
+      },
+      "required": ["id", "title", "creatorUid"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profiles"
+    },
+    "/games/{gameId}": {
+      "schema": "Game",
+      "description": "Published games"
+    }
+  }
+}

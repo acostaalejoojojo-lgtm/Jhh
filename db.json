@@ -1,0 +1,389 @@
+{
+  "users": {
+    "Invitado": {
+      "username": "Invitado",
+      "displayName": "Invitado",
+      "robux": 1540,
+      "friends": [],
+      "avatarConfig": {
+        "bodyColors": {
+          "head": "#FFFFFF",
+          "torso": "#0D5ABD",
+          "leftArm": "#F5CD30",
+          "rightArm": "#F5CD30",
+          "leftLeg": "#A2C429",
+          "rightLeg": "#A2C429"
+        },
+        "faceTextureUrl": null,
+        "accessories": {
+          "hatModelUrl": "",
+          "shirtTextureUrl": null
+        },
+        "hideFace": false,
+        "faceVideoUrl": null
+      },
+      "settings": {
+        "language": "es",
+        "backgroundColor": "#064e3b"
+      },
+      "studioMap": {
+        "title": "Mi Experiencia Voxel",
+        "map": [
+          {
+            "id": "config",
+            "name": "GameConfig",
+            "type": "Part",
+            "position": [
+              0,
+              -1000,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "color": "#000000",
+            "material": "Plastic",
+            "transparency": 1,
+            "anchored": true,
+            "canCollide": false,
+            "isShooter": true
+          },
+          {
+            "id": "baseplate",
+            "name": "Baseplate",
+            "type": "Part",
+            "position": [
+              0,
+              -0.5,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1000,
+              1,
+              1000
+            ],
+            "color": "#1a1a1a",
+            "material": "Plastic",
+            "transparency": 0,
+            "anchored": true,
+            "canCollide": true
+          },
+          {
+            "id": "spawn",
+            "name": "Spawn Location",
+            "type": "Part",
+            "position": [
+              0,
+              100,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              50,
+              1,
+              50
+            ],
+            "color": "#ffffff",
+            "material": "Plastic",
+            "transparency": 0.5,
+            "anchored": true,
+            "canCollide": true
+          },
+          {
+            "id": "b1",
+            "name": "Building 1",
+            "type": "Part",
+            "position": [
+              50,
+              10,
+              50
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              20,
+              20,
+              20
+            ],
+            "color": "#555555",
+            "material": "Brick",
+            "transparency": 0,
+            "anchored": true,
+            "canCollide": true
+          },
+          {
+            "id": "b2",
+            "name": "Building 2",
+            "type": "Part",
+            "position": [
+              -50,
+              15,
+              -50
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              25,
+              30,
+              25
+            ],
+            "color": "#444444",
+            "material": "Brick",
+            "transparency": 0,
+            "anchored": true,
+            "canCollide": true
+          },
+          {
+            "id": "loot1",
+            "name": "Loot Chest",
+            "type": "Part",
+            "position": [
+              50,
+              1,
+              50
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              2,
+              2,
+              2
+            ],
+            "color": "#ffd700",
+            "material": "Neon",
+            "transparency": 0,
+            "anchored": false,
+            "canCollide": true,
+            "isWeapon": true,
+            "weaponType": "Rifle"
+          },
+          {
+            "id": "loot2",
+            "name": "Loot Chest",
+            "type": "Part",
+            "position": [
+              -50,
+              1,
+              -50
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              2,
+              2,
+              2
+            ],
+            "color": "#ffd700",
+            "material": "Neon",
+            "transparency": 0,
+            "anchored": false,
+            "canCollide": true,
+            "isWeapon": true,
+            "weaponType": "Sniper"
+          },
+          {
+            "id": "bot1",
+            "name": "Enemy Bot",
+            "type": "Part",
+            "position": [
+              100,
+              1,
+              100
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              2,
+              1
+            ],
+            "color": "#ff0000",
+            "material": "Plastic",
+            "transparency": 0,
+            "anchored": false,
+            "canCollide": true,
+            "isBot": true,
+            "health": 100,
+            "maxHealth": 100
+          },
+          {
+            "id": "bot2",
+            "name": "Enemy Bot",
+            "type": "Part",
+            "position": [
+              -100,
+              1,
+              -100
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              2,
+              1
+            ],
+            "color": "#ff0000",
+            "material": "Plastic",
+            "transparency": 0,
+            "anchored": false,
+            "canCollide": true,
+            "isBot": true,
+            "health": 100,
+            "maxHealth": 100
+          },
+          {
+            "id": "1775333158293",
+            "name": "1000030130.fbx",
+            "type": "Model",
+            "position": [
+              0,
+              2,
+              0
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ],
+            "color": "#ffffff",
+            "material": "Plastic",
+            "transparency": 0,
+            "anchored": false,
+            "canCollide": true,
+            "assetUrl": "blob:https://ais-dev-nlhu5ga34emx4b724lewtv-39651482274.us-west2.run.app/d164fcce-c2b8-4305-bbbd-29a897f54516#fbx",
+            "availableAnimations": [
+              "clip"
+            ]
+          }
+        ],
+        "skybox": "Day"
+      },
+      "online": true,
+      "lastSeen": "2026-05-07T00:49:07.646Z",
+      "xp": 10
+    },
+    "glidrovia": {
+      "username": "glidrovia",
+      "displayName": "Glidrovia Oficial",
+      "robux": 1540,
+      "drovis": 400,
+      "rank": "Standard",
+      "usernameChangeCards": 1,
+      "friends": [],
+      "avatarConfig": {
+        "bodyColors": {
+          "head": "#F5CD30",
+          "torso": "#0047AB",
+          "leftArm": "#F5CD30",
+          "rightArm": "#F5CD30",
+          "leftLeg": "#A2C429",
+          "rightLeg": "#A2C429"
+        },
+        "faceTextureUrl": null,
+        "accessories": {
+          "hatModelUrl": null,
+          "shirtTextureUrl": null
+        },
+        "hideFace": false
+      },
+      "settings": {
+        "language": "es",
+        "backgroundColor": "#1a1b1e"
+      },
+      "online": false,
+      "lastSeen": "2026-05-07T00:48:36.445Z",
+      "xp": 20
+    },
+    "Homyred2015": {
+      "username": "Homyred2015",
+      "displayName": "Homyred2015",
+      "robux": 1540,
+      "drovis": 400,
+      "rank": "Standard",
+      "usernameChangeCards": 1,
+      "friends": [],
+      "avatarConfig": {
+        "bodyColors": {
+          "head": "#F5CD30",
+          "torso": "#0047AB",
+          "leftArm": "#F5CD30",
+          "rightArm": "#F5CD30",
+          "leftLeg": "#A2C429",
+          "rightLeg": "#A2C429"
+        },
+        "faceTextureUrl": null,
+        "accessories": {
+          "hatModelUrl": null,
+          "shirtTextureUrl": null
+        },
+        "hideFace": false
+      },
+      "settings": {
+        "language": "es",
+        "backgroundColor": "#1a1b1e"
+      },
+      "online": true,
+      "lastSeen": "2026-05-07T00:50:44.941Z",
+      "xp": 10
+    }
+  },
+  "games": [
+    {
+      "id": "1",
+      "title": "Glidrovia City RP",
+      "creator": "Glidrovia",
+      "thumbnail": "https://picsum.photos/seed/city/768/432",
+      "likes": "94%",
+      "playing": 450000
+    },
+    {
+      "id": "2",
+      "title": "Tower of Glidrovia",
+      "creator": "User123",
+      "thumbnail": "https://picsum.photos/seed/tower/768/432",
+      "likes": "88%",
+      "playing": 12000
+    }
+  ],
+  "regions": [],
+  "reports": []
+}

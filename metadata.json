@@ -1,0 +1,7 @@
+{
+  "name": "Remix: Glidrovia",
+  "description": "Glidrovia: A professional 3D social platform. We follow DMCA Safe Harbor protocols to ensure community safety and respect for intellectual property.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
